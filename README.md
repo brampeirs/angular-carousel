@@ -1,5 +1,21 @@
 # AngularCarousel
+<img src="docs/img/screely.png" alt="marcdown" width="100%">
 
+
+### Features :sparkles:
+
+:heart: **Created in Angular**: Angular V7
+
+:zap: **Angular Animations**: Makes use of Angular animations
+
+---
+
+## Demo
+https://brampeirs.github.io/angular-carousel/
+
+---
+
+## Setup
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
 
 ## Development server
