@@ -1,0 +1,48 @@
+$base-duration: 600ms;
+$base-ease: cubic-bezier(0.25, 0.46, 0.45, 0.84);
+
+
+.animition-type-selector {
+  
+  margin-top: 1.5em;
+  display: flex;
+  flex-wrap: wrap;
+
+  align-items: stretch;
+  align-content: center;
+  justify-content: center;
+  
+
+  color: white;
+  //background: rgba(134, 134, 134, 0.3);
+  border-radius: 1%;
+}
+
+.title {
+  //background: rgba(0,0,0,0.5);
+  user-select: none;
+}
+.button {
+ background: blue;
+  cursor: pointer;
+  border-radius: 0.3em;
+}
+.title, .button {
+  height: 2.5em;
+  min-width: 4.5em;
+ 
+  margin-bottom: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  padding: 0.5em 0.7em;
+ transition: background $base-duration / 3 $base-ease;
+
+  &:not(:last-child) {
+    margin-right: 1em;
+  }
+}
+.button:hover, .active {
+   background: purple;
+}
