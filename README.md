@@ -1,5 +1,5 @@
 # AngularCarousel
-<img src="docs/img/screely.png" alt="marcdown" width="100%">
+<img src="docs/img/screely2.png" alt="marcdown" width="100%">
 
 
 ### Features :sparkles:
