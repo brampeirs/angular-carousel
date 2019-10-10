@@ -5,12 +5,16 @@
 $base-duration: 600ms;
 $base-ease: cubic-bezier(0.25, 0.46, 0.45, 0.84);
 
+:host {
+  flex: 1;
+}
+
 .slider {
   position: relative;
-  height: 95%;
+  height: 100%;
   width: 100%;
   overflow: hidden;
-  border-radius: 1%;
+  border-radius: 0.5em;
 }
 
 .slide {
@@ -21,7 +25,7 @@ $base-ease: cubic-bezier(0.25, 0.46, 0.45, 0.84);
   height: 100%;
   object-fit: cover;
   transition: transform $base-duration / 4 $base-ease;
-  backface-visibility: visible !important;
+  border-radius: 0.5em;
 }
 
 .slide:hover {
@@ -44,7 +48,7 @@ $base-ease: cubic-bezier(0.25, 0.46, 0.45, 0.84);
   font-size: 3em;
   user-select: none;
   height: 100%;
-  opacity: 0.25;
+  opacity: 80%;
   transition: opacity $base-duration / 4 $base-ease;
 
   &:hover {
@@ -58,4 +62,21 @@ $base-ease: cubic-bezier(0.25, 0.46, 0.45, 0.84);
 }
 .prev {
   left: 0;
+}
+
+/* style the buttons */
+.control-button {
+  display: block;
+  border: 0.1em solid white;
+  border-right: none;
+  border-top: none;
+  width: 0.5em;
+  height: 0.5em;
+
+  &.left {
+    transform: rotate(45deg);
+  }
+  &.right {
+    transform: rotate(225deg);
+  }
 }
