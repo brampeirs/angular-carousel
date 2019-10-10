@@ -2,14 +2,13 @@
   <carousel [slides]="slides" [animationType]="animationType"></carousel>
   <div class="animition-type-selector">
     <div class="title">Let's Play! 😎</div>
-    <div 
-      *ngFor="let type of animationTypes" 
+    <div
+      *ngFor="let type of animationTypes"
       class="button"
       (click)="setAnimationType(type)"
       [class.active]="animationType === type.value"
     >
-      {{type.name}}
+      {{ type.name }}
     </div>
-   
   </div>
 </div>

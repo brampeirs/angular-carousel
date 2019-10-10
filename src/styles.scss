@@ -3,17 +3,20 @@
 // =========================
 // Global
 // =========================
-@import url('https://fonts.googleapis.com/css?family=Montserrat:800&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Montserrat:800&display=swap");
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
 
-html, body {
-    margin: 0;
-    padding: 0;
-    background: #101118;
-    font-family: 'Montserrat', sans-serif;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #101118;
+  font-family: "Montserrat", sans-serif;
 }
 
 .container {

@@ -1,5 +1,5 @@
-import { Component, Input } from '@angular/core';
-import { Slide } from './carousel.interface';
+import { Component, Input } from "@angular/core";
+import { Slide } from "./carousel.interface";
 import {
   trigger,
   state,
@@ -9,35 +9,44 @@ import {
   group,
   query,
   useAnimation,
-    animation, 
+  animation
+} from "@angular/animations";
 
-} from '@angular/animations';
-
-import { AnimationType, scaleIn, scaleOut, fadeIn, fadeOut, flipIn, flipOut, jackIn, jackOut } from './carousel.animations';
+import {
+  AnimationType,
+  scaleIn,
+  scaleOut,
+  fadeIn,
+  fadeOut,
+  flipIn,
+  flipOut,
+  jackIn,
+  jackOut
+} from "./carousel.animations";
 
 @Component({
-  selector: 'carousel',
-  templateUrl: './carousel.component.html',
-  styleUrls: ['./carousel.component.scss'],
+  selector: "carousel",
+  templateUrl: "./carousel.component.html",
+  styleUrls: ["./carousel.component.scss"],
 
   animations: [
-    trigger('slideAnimation', [  
+    trigger("slideAnimation", [
       /* scale */
-      transition('void => scale', [useAnimation(scaleIn)]),
-      transition('scale => void', [useAnimation(scaleOut)]),
+      transition("void => scale", [useAnimation(scaleIn)]),
+      transition("scale => void", [useAnimation(scaleOut)]),
 
       /* fade */
-      transition('void => fade', [useAnimation(fadeIn)]),
-      transition('fade => void', [useAnimation(fadeOut)]),
+      transition("void => fade", [useAnimation(fadeIn)]),
+      transition("fade => void", [useAnimation(fadeOut)]),
 
       /* flip */
-      transition('void => flip', [useAnimation(flipIn)]),
-      transition('flip => void', [useAnimation(flipOut)]),
+      transition("void => flip", [useAnimation(flipIn)]),
+      transition("flip => void", [useAnimation(flipOut)]),
 
       /* JackInTheBox */
-      transition('void => jackInTheBox', [useAnimation(jackIn)]),
-      transition('jackInTheBox => void', [useAnimation(jackOut)]),
-    ])   
+      transition("void => jackInTheBox", [useAnimation(jackIn)]),
+      transition("jackInTheBox => void", [useAnimation(jackOut)])
+    ])
   ]
 })
 
@@ -52,26 +61,23 @@ import { AnimationType, scaleIn, scaleOut, fadeIn, fadeOut, flipIn, flipOut, jac
 // slide effect -> https://onehungrymind.com/angular-animations-intro/
 // animations -> https://codepen.io/jh3y/pen/WwVKLN
 // inspiration -> https://tympanus.net/codrops/2019/08/20/react-slider-with-parallax-hover-effects/
-
 export class CarouselComponent {
-
   @Input() slides: Slide[];
   @Input() animationType = AnimationType.Scale;
 
   currentSlide = 0;
 
-  constructor() { }
+  constructor() {}
 
   onPreviousClick() {
-    const previous = this.currentSlide - 1
+    const previous = this.currentSlide - 1;
     this.currentSlide = previous < 0 ? this.slides.length - 1 : previous;
-    console.log('previous clicked, new current slide is: ', this.currentSlide);
+    console.log("previous clicked, new current slide is: ", this.currentSlide);
   }
 
   onNextClick() {
-    const next = this.currentSlide + 1
+    const next = this.currentSlide + 1;
     this.currentSlide = next === this.slides.length ? 0 : next;
-    console.log('next clicked, new current slide is: ', this.currentSlide);
-  } 
-
+    console.log("next clicked, new current slide is: ", this.currentSlide);
+  }
 }

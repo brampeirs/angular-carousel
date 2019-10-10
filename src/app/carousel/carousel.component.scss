@@ -6,32 +6,33 @@ $base-duration: 600ms;
 $base-ease: cubic-bezier(0.25, 0.46, 0.45, 0.84);
 
 .slider {
-    position: relative;
-    height: 95%;
-    width: 100%;
-    overflow: hidden;
-    border-radius: 1%;
+  position: relative;
+  height: 95%;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 1%;
 }
 
 .slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform $base-duration / 4 $base-ease;
-    backface-visibility: visible !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform $base-duration / 4 $base-ease;
+  backface-visibility: visible !important;
 }
 
-.slide:hover {  
+.slide:hover {
   transform: scale(1.025);
 }
 
 // =========================
 // Next and Prev buttons
 // =========================
-.prev, .next {
+.prev,
+.next {
   position: absolute;
   cursor: pointer;
   display: flex;
@@ -43,7 +44,7 @@ $base-ease: cubic-bezier(0.25, 0.46, 0.45, 0.84);
   font-size: 3em;
   user-select: none;
   height: 100%;
-  opacity: .25;
+  opacity: 0.25;
   transition: opacity $base-duration / 4 $base-ease;
 
   &:hover {

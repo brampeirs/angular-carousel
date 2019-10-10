@@ -1,19 +1,15 @@
-
 <!-- slider -->
 <div class="slider">
-    <ng-container *ngFor="let slide of slides; let i = index;" >
-      <img 
+  <ng-container *ngFor="let slide of slides; let i = index">
+    <img
       *ngIf="i === currentSlide"
-      [src]="slide.src" 
-      class="slide" 
+      [src]="slide.src"
+      class="slide"
       [@slideAnimation]="animationType"
     />
-    </ng-container>
-  
-    <!-- controls -->
-    <div class="prev" (click)="onPreviousClick()">&#10094;</div>
-    <div class="next" (click)="onNextClick()">&#10095;</div>
-  </div>
-  
-  
-  
+  </ng-container>
+
+  <!-- controls -->
+  <div class="prev" (click)="onPreviousClick()">&#10094;</div>
+  <div class="next" (click)="onNextClick()">&#10095;</div>
+</div>

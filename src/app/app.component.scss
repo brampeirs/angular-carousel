@@ -1,9 +1,7 @@
 $base-duration: 600ms;
 $base-ease: cubic-bezier(0.25, 0.46, 0.45, 0.84);
 
-
 .animition-type-selector {
-  
   margin-top: 1.5em;
   display: flex;
   flex-wrap: wrap;
@@ -11,7 +9,6 @@ $base-ease: cubic-bezier(0.25, 0.46, 0.45, 0.84);
   align-items: stretch;
   align-content: center;
   justify-content: center;
-  
 
   color: white;
   //background: rgba(134, 134, 134, 0.3);
@@ -23,26 +20,28 @@ $base-ease: cubic-bezier(0.25, 0.46, 0.45, 0.84);
   user-select: none;
 }
 .button {
- background: blue;
+  background: blue;
   cursor: pointer;
   border-radius: 0.3em;
 }
-.title, .button {
+.title,
+.button {
   height: 2.5em;
   min-width: 4.5em;
- 
+
   margin-bottom: 1em;
   display: flex;
   align-items: center;
   justify-content: center;
-  
+
   padding: 0.5em 0.7em;
- transition: background $base-duration / 3 $base-ease;
+  transition: background $base-duration / 3 $base-ease;
 
   &:not(:last-child) {
     margin-right: 1em;
   }
 }
-.button:hover, .active {
-   background: purple;
+.button:hover,
+.active {
+  background: purple;
 }
