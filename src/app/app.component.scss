@@ -17,7 +17,7 @@ $base-ease: cubic-bezier(0.25, 0.46, 0.45, 0.84);
   user-select: none;
 }
 .button {
-  background: #59b6ff;
+  background: #3f51b5;
   cursor: pointer;
   border-radius: 0.3em;
 }
@@ -40,5 +40,5 @@ $base-ease: cubic-bezier(0.25, 0.46, 0.45, 0.84);
 }
 .button:hover,
 .active {
-  background: #ff82ff;
+  background: #2196f3;
 }
