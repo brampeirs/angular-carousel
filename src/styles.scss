@@ -15,7 +15,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background: #101118;
+  background: #2c2e83;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -23,6 +23,8 @@ body {
   display: block;
   height: 100vh;
   width: 100vw;
+  max-height: 600px;
+  max-width: 750px;
   padding: 2em 2em 0;
 
   position: absolute;
