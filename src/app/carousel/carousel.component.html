@@ -1,5 +1,5 @@
-<!-- slider -->
-<div class="slider">
+<!-- carousel -->
+<div class="carousel">
   <ng-container *ngFor="let slide of slides; let i = index">
     <img
       *ngIf="i === currentSlide"
@@ -10,10 +10,10 @@
   </ng-container>
 
   <!-- controls -->
-  <div class="prev" (click)="onPreviousClick()">
-    <span class="control-button left"></span>
+  <div class="control prev" (click)="onPreviousClick()">
+    <span class="arrow left"></span>
   </div>
-  <div class="next" (click)="onNextClick()">
-    <span class="control-button right"></span>
+  <div class="control next" (click)="onNextClick()">
+    <span class="arrow right"></span>
   </div>
 </div>

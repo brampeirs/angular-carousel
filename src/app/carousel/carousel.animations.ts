@@ -1,10 +1,4 @@
-import {
-  style,
-  animate,
-  animation,
-  transition,
-  keyframes
-} from "@angular/animations";
+import { style, animate, animation, keyframes } from "@angular/animations";
 
 // =========================
 // Enum for referencing animations
@@ -22,14 +16,14 @@ export enum AnimationType {
 export const scaleIn = animation([
   style({ opacity: 0, transform: "scale(0.5)" }), // start state
   animate(
-    "500ms cubic-bezier(0.785, 0.135, 0.15, 0.86)",
+    "{{time}} cubic-bezier(0.785, 0.135, 0.15, 0.86)",
     style({ opacity: 1, transform: "scale(1)" })
   )
 ]);
 
 export const scaleOut = animation([
   animate(
-    "500ms cubic-bezier(0.785, 0.135, 0.15, 0.86)",
+    "{{time}} cubic-bezier(0.785, 0.135, 0.15, 0.86)",
     style({ opacity: 0, transform: "scale(0.5)" })
   )
 ]);
@@ -39,11 +33,17 @@ export const scaleOut = animation([
 // =========================
 export const fadeIn = animation([
   style({ opacity: 0 }), // start state
-  animate("500ms cubic-bezier(0.785, 0.135, 0.15, 0.86)", style({ opacity: 1 }))
+  animate(
+    "{{time}} cubic-bezier(0.785, 0.135, 0.15, 0.86)",
+    style({ opacity: 1 })
+  )
 ]);
 
 export const fadeOut = animation([
-  animate("500ms cubic-bezier(0.785, 0.135, 0.15, 0.86)", style({ opacity: 0 }))
+  animate(
+    "{{time}} cubic-bezier(0.785, 0.135, 0.15, 0.86)",
+    style({ opacity: 0 })
+  )
 ]);
 
 // =========================
@@ -51,7 +51,7 @@ export const fadeOut = animation([
 // =========================
 export const flipIn = animation([
   animate(
-    "500ms cubic-bezier(0.785, 0.135, 0.15, 0.86)",
+    "{{time}} cubic-bezier(0.785, 0.135, 0.15, 0.86)",
     keyframes([
       style({
         opacity: 1,
@@ -72,7 +72,7 @@ export const flipOut = animation([
 // =========================
 export const jackIn = animation([
   animate(
-    "700ms ease-in",
+    "{{time}} ease-in",
     keyframes([
       style({
         animationFillMode: "forwards",

@@ -1,4 +1,4 @@
-import { Component, ViewChild, OnInit } from "@angular/core";
+import { Component, ViewChild } from "@angular/core";
 import { Slide } from "./carousel/carousel.interface";
 import { AnimationType } from "./carousel/carousel.animations";
 import { CarouselComponent } from "./carousel/carousel.component";
@@ -7,7 +7,7 @@ import { CarouselComponent } from "./carousel/carousel.component";
   templateUrl: "./app.component.html",
   styleUrls: ["./app.component.scss"]
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   @ViewChild(CarouselComponent) carousel: CarouselComponent;
 
   animationType = AnimationType.Scale;
@@ -54,16 +54,6 @@ export class AppComponent implements OnInit {
   ];
 
   constructor() {}
-
-  ngOnInit() {
-    this.preloadImages(); // for the demo
-  }
-
-  preloadImages() {
-    for (const slide of this.slides) {
-      new Image().src = slide.src;
-    }
-  }
 
   setAnimationType(type) {
     this.animationType = type.value;
