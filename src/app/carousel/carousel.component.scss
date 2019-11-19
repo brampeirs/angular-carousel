@@ -1,5 +1,5 @@
 // =========================
-// Slider
+// Carousel
 // =========================
 
 :host {
@@ -34,6 +34,9 @@
 // Next and Prev buttons
 // =========================
 .control {
+  border: none;
+  background-color: transparent;
+  outline: 0; // remove blue outline border, but make sure they are still focussable for accessibility
   position: absolute;
   cursor: pointer;
   display: flex;
@@ -49,7 +52,8 @@
   // opacity effect on hover
   transition: opacity 150ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
 
-  &:hover {
+  &:hover,
+  &:focus {
     opacity: 1;
   }
 
