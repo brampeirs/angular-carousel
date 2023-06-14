@@ -8,7 +8,7 @@ import { CarouselComponent } from "./carousel/carousel.component";
   styleUrls: ["./app.component.scss"]
 })
 export class AppComponent {
-  @ViewChild(CarouselComponent) carousel: CarouselComponent;
+  @ViewChild(CarouselComponent, { static: true }) carousel: CarouselComponent;
 
   animationType = AnimationType.Scale;
 
